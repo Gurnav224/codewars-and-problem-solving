@@ -1,2 +1,4 @@
 # solving daily codewars problem and add to this repo
-# codewars-and-problem-solving
+
+## date 01-01-2024
+solve 5 problem of codewars
