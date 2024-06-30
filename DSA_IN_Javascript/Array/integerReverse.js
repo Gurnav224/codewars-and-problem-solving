@@ -10,6 +10,3 @@ function reverseNumber(num){
 
 console.log(reverseNumber(124))
 
-
-time : Big O (n)
-space : Big O (n)
