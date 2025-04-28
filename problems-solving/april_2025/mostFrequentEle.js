@@ -1,16 +1,21 @@
-function mostFrequentItemCount(collection) {
- if(collection.length === 0) return 0;
-  let count = {};
+function solve(arr) {
+  //..
+  let sorted = [...arr].sort((a,b) => a -b);
+  let left = 0;
+  let right = sorted.length-1;
+  let result = [];
   
-  for (let i = 0; i < collection.length; i++){
-    count[collection[i]] = (count[collection[i]] || 0)+1;
+  while(left <= right){
+    if(left !== right){
+      result.push(sorted[right--])
+      result.push(sorted[left++]);
+    }
+    else{
+      result.push(sorted[left++])
+    }
   }
-  
-  const max = Object.values(count)
-  
-  return Math.max(...max)
+
+  return result
 }
 
-
-console.log(mostFrequentItemCount( [3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]))
-console.log(mostFrequentItemCount([]))
+console.log(solve([12, 4, 8, 5]));
